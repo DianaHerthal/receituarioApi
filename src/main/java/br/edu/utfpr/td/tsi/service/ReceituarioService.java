@@ -47,23 +47,23 @@ public class ReceituarioService {
         boolean temFiltro = false;
 
         if (temValor(nomePaciente)) {
-            query.addCriteria(Criteria.where("NOME_COMPLETO").regex(Pattern.quote(nomePaciente.trim()), "i"));
+            query.addCriteria(Criteria.where("PACIENTE_NOME").regex(Pattern.quote(nomePaciente.trim()), "i"));
             temFiltro = true;
         }
 
         if (temValor(nomeMedico)) {
-            query.addCriteria(Criteria.where("NOME_MEDICO").regex(Pattern.quote(nomeMedico.trim()), "i"));
+            query.addCriteria(Criteria.where("MEDICO_NOME").regex(Pattern.quote(nomeMedico.trim()), "i"));
             temFiltro = true;
         }
 
         if (temValor(cpfPaciente)) {
             String cpfLimpo = cpfPaciente.replaceAll("\\D", "");
-            query.addCriteria(Criteria.where("CPF").is(cpfLimpo));
+            query.addCriteria(Criteria.where("PACIENTE_CPF").is(cpfLimpo));
             temFiltro = true;
         }
 
         if (temValor(crmMedico)) {
-            query.addCriteria(Criteria.where("CRM").is(crmMedico.trim()));
+            query.addCriteria(Criteria.where("MEDICO_CRM").is(crmMedico.trim()));
             temFiltro = true;
         }
 
