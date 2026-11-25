@@ -72,9 +72,6 @@ public class Receituario {
     @Valid
     private List<ItemReceituario> itensReceituario;
 
-    @Field("OBSERVACOES_GERAIS")
-    private String observacoesGerais;
-
     @Field("STATUS")
     private String status = "ATIVA"; // Ex: ATIVA, DISPENSADA, CANCELADA
 }
