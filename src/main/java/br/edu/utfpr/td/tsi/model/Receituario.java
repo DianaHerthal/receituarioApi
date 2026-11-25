@@ -34,7 +34,6 @@ public class Receituario {
     @NotBlank(message = "Tipo de receita é obrigatório.")
     private String tipoReceita; 
 
-    // PACIENTE
     @Field("PACIENTE_ID")
     private String pacienteId;
 
@@ -47,7 +46,6 @@ public class Receituario {
     @Pattern(regexp = "\\d{11}", message = "CPF deve conter 11 dígitos numéricos.")
     private String pacienteCpf;
 
-    // MÉDICO
     @Field("MEDICO_ID")
     private String medicoId;
 
@@ -66,12 +64,12 @@ public class Receituario {
     @Field("MEDICO_ESPECIALIDADE")
     private String medicoEspecialidade;
 
-    // MEDICAMENTOS
+
     @Field("MEDICAMENTOS")
     @NotEmpty(message = "O receituário deve conter ao menos um medicamento.")
     @Valid
     private List<ItemReceituario> itensReceituario;
 
     @Field("STATUS")
-    private String status = "ATIVA"; // Ex: ATIVA, DISPENSADA, CANCELADA
+    private String status = "ATIVA"; 
 }
