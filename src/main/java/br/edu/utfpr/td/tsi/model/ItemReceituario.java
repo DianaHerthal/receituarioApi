@@ -28,7 +28,10 @@ public class ItemReceituario {
 
     @Field("POSOLOGIA")
     @NotBlank(message = "Posologia é obrigatória.")
-    private String posologia; 
+    private String posologia;
+
+    @Field("FREQUENCIA")
+    private String frequencia;
 
     @Field("DURACAO_TRATAMENTO")
     private String duracaoTratamento; 
